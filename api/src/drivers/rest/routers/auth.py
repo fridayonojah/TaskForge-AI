@@ -2,26 +2,16 @@ import os
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from pydantic import BaseModel, EmailStr
 
-from drivers.rest.dependencies import get_register_use_case, get_authenticate_use_case
-from infrastructure.security import create_access_token
-from use_cases.register_user_use_case import RegisterUserUseCase
-from use_cases.authenticate_user_use_case import AuthenticateUserUseCase
-from use_cases.exceptions import UserAlreadyExistsError, InvalidCredentialsError
+from api.src.drivers.rest.dependencies import get_register_use_case, get_authenticate_use_case
+from api.src.drivers.rest.schemas.auth import RegisterRequest, TokenResponse
+from api.src.infrastructure.security import create_access_token
+from api.src.use_cases.register_user_use_case import RegisterUserUseCase
+from api.src.use_cases.authenticate_user_use_case import AuthenticateUserUseCase
+from api.src.use_cases.exceptions import UserAlreadyExistsError, InvalidCredentialsError
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/token")
-
-
-class RegisterRequest(BaseModel):
-    email: EmailStr
-    password: str
-
-
-class TokenResponse(BaseModel):
-    access_token: str
-    token_type: str = "bearer"
 
 
 @router.post("/register", status_code=status.HTTP_201_CREATED)

@@ -10,14 +10,14 @@ from langgraph.checkpoint.postgres import PostgresSaver
 import psycopg
 import certifi
 
-from adapters.planners.langgraph_travel_planner import LangGraphTravelPlanner
-from adapters.planners.langgraph_industry_researcher import LangGraphIndustryResearcher
-from adapters.tools.aviationstack_flight_tool import AviationStackFlightTool
-from adapters.tools.tavily_hotel_tool import TavilyHotelTool
-from adapters.tools.tavily_web_search_tool import TavilyWebSearchTool
-from domain.entities.travel_request import TravelRequest
-from domain.entities.research_request import ResearchRequest
-from domain.value_objects.thread_id import ThreadId
+from api.src.adapters.planners.langgraph_travel_planner import LangGraphTravelPlanner
+from api.src.adapters.planners.langgraph_industry_researcher import LangGraphIndustryResearcher
+from api.src.adapters.tools.aviationstack_flight_tool import AviationStackFlightTool
+from api.src.adapters.tools.tavily_hotel_tool import TavilyHotelTool
+from api.src.adapters.tools.tavily_web_search_tool import TavilyWebSearchTool
+from api.src.domain.entities.travel_request import TravelRequest
+from api.src.domain.entities.research_request import ResearchRequest
+from api.src.domain.value_objects.thread_id import ThreadId
 
 
 async def plan_trip_task(ctx: dict, job_id: str, query: str, thread_id_value: str) -> None:

@@ -1,6 +1,6 @@
 from tavily import TavilyClient
 from tenacity import retry, stop_after_attempt, wait_exponential
-from ports.tools.hotel_search_tool import HotelSearchTool
+from api.src.ports.tools.hotel_search_tool import HotelSearchTool
 
 
 class TavilyHotelTool(HotelSearchTool):

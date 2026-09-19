@@ -1,19 +1,11 @@
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from drivers.rest.dependencies import get_job_queue
 from typing import Annotated
-from fastapi import Depends
-from ports.queue.job_queue import JobQueue
+from fastapi import APIRouter, Depends, HTTPException
+
+from api.src.drivers.rest.dependencies import get_job_queue
+from api.src.drivers.rest.schemas.jobs import JobStatusResponse
+from api.src.ports.queue.job_queue import JobQueue
 
 router = APIRouter(prefix="/jobs", tags=["jobs"])
-
-
-class JobStatusResponse(BaseModel):
-    job_id: str
-    job_type: str
-    status: str
-    result: dict | None = None
-    error: str | None = None
 
 
 @router.get("/{job_id}", response_model=JobStatusResponse)

@@ -1,10 +1,10 @@
 import pytest
 from unittest.mock import AsyncMock
-from domain.entities.travel_request import TravelRequest
-from domain.entities.travel_plan import TravelPlan
-from domain.value_objects.thread_id import ThreadId
-from use_cases.plan_trip_use_case import PlanTripUseCase
-from use_cases.exceptions import EmptyQueryError
+from api.src.domain.entities.travel_request import TravelRequest
+from api.src.domain.entities.travel_plan import TravelPlan
+from api.src.domain.value_objects.thread_id import ThreadId
+from api.src.use_cases.plan_trip_use_case import PlanTripUseCase
+from api.src.use_cases.exceptions import EmptyQueryError
 
 
 @pytest.mark.asyncio

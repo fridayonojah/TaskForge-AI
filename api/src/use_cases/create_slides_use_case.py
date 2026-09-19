@@ -1,7 +1,7 @@
-from domain.entities.slide_request import SlideRequest
-from domain.entities.slide_deck import SlideDeck
-from ports.planners.slide_creator import SlideCreator
-from use_cases.exceptions import EmptyQueryError, PlanningFailedError
+from api.src.domain.entities.slide_request import SlideRequest
+from api.src.domain.entities.slide_deck import SlideDeck
+from api.src.ports.planners.slide_creator import SlideCreator
+from api.src.use_cases.exceptions import EmptyQueryError, PlanningFailedError
 
 class CreateSlidesUseCase:
     def __init__(self, creator: SlideCreator) -> None:

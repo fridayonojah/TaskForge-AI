@@ -5,9 +5,9 @@ from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, START, END
 
-from domain.entities.resume_request import ResumeRequest
-from domain.entities.resume_result import ResumeResult
-from ports.planners.resume_polisher import ResumePolisher
+from api.src.domain.entities.resume_request import ResumeRequest
+from api.src.domain.entities.resume_result import ResumeResult
+from api.src.ports.planners.resume_polisher import ResumePolisher
 
 
 class _ResumeState(TypedDict):

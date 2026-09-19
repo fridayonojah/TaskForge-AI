@@ -1,10 +1,10 @@
 import pytest
 from unittest.mock import AsyncMock
-from domain.entities.slide_request import SlideRequest
-from domain.entities.slide_deck import SlideDeck
-from domain.value_objects.thread_id import ThreadId
-from use_cases.create_slides_use_case import CreateSlidesUseCase
-from use_cases.exceptions import EmptyQueryError
+from api.src.domain.entities.slide_request import SlideRequest
+from api.src.domain.entities.slide_deck import SlideDeck
+from api.src.domain.value_objects.thread_id import ThreadId
+from api.src.use_cases.create_slides_use_case import CreateSlidesUseCase
+from api.src.use_cases.exceptions import EmptyQueryError
 
 
 @pytest.mark.asyncio

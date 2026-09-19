@@ -1,26 +1,11 @@
 from typing import Annotated
 from fastapi import APIRouter, Depends
-from pydantic import BaseModel
 
-from drivers.rest.dependencies import get_job_queue
-from ports.queue.job_queue import JobQueue
+from api.src.drivers.rest.dependencies import get_job_queue
+from api.src.drivers.rest.schemas.travel import TravelRequestSchema, TravelJobResponse, HealthResponse
+from api.src.ports.queue.job_queue import JobQueue
 
 router = APIRouter()
-
-
-class TravelRequestSchema(BaseModel):
-    message: str
-    thread_id: str | None = None
-
-
-class TravelJobResponse(BaseModel):
-    job_id: str
-    status: str
-    message: str
-
-
-class HealthResponse(BaseModel):
-    status: str
 
 
 @router.post("/travel", response_model=TravelJobResponse)

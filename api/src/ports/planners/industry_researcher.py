@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from domain.entities.research_request import ResearchRequest
-from domain.entities.research_result import ResearchResult
+from api.src.domain.entities.research_request import ResearchRequest
+from api.src.domain.entities.research_result import ResearchResult
 
 class IndustryResearcher(ABC):
     @abstractmethod

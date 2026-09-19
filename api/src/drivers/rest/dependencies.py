@@ -11,27 +11,27 @@ from langchain_groq import ChatGroq
 from langgraph.checkpoint.postgres import PostgresSaver
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 
-from adapters.cache.redis_cache_store import RedisCacheStore
-from adapters.planners.langgraph_industry_researcher import LangGraphIndustryResearcher
-from adapters.planners.langgraph_resume_polisher import LangGraphResumePolisher
-from adapters.planners.langgraph_sheet_builder import LangGraphSheetBuilder
-from adapters.planners.langgraph_slide_creator import LangGraphSlideCreator
-from adapters.planners.langgraph_travel_planner import LangGraphTravelPlanner
-from adapters.queue.arq_job_queue import ArqJobQueue
-from adapters.repositories.postgres_user_repository import PostgresUserRepository
-from adapters.tools.aviationstack_flight_tool import AviationStackFlightTool
-from adapters.tools.tavily_hotel_tool import TavilyHotelTool
-from adapters.tools.tavily_web_search_tool import TavilyWebSearchTool
-from infrastructure.security import hash_password, verify_password
-from ports.cache.cache_store import CacheStore
-from ports.queue.job_queue import JobQueue
-from use_cases.authenticate_user_use_case import AuthenticateUserUseCase
-from use_cases.build_sheet_use_case import BuildSheetUseCase
-from use_cases.create_slides_use_case import CreateSlidesUseCase
-from use_cases.plan_trip_use_case import PlanTripUseCase
-from use_cases.polish_resume_use_case import PolishResumeUseCase
-from use_cases.register_user_use_case import RegisterUserUseCase
-from use_cases.research_industry_use_case import ResearchIndustryUseCase
+from api.src.adapters.cache.redis_cache_store import RedisCacheStore
+from api.src.adapters.planners.langgraph_industry_researcher import LangGraphIndustryResearcher
+from api.src.adapters.planners.langgraph_resume_polisher import LangGraphResumePolisher
+from api.src.adapters.planners.langgraph_sheet_builder import LangGraphSheetBuilder
+from api.src.adapters.planners.langgraph_slide_creator import LangGraphSlideCreator
+from api.src.adapters.planners.langgraph_travel_planner import LangGraphTravelPlanner
+from api.src.adapters.queue.arq_job_queue import ArqJobQueue
+from api.src.adapters.repositories.postgres_user_repository import PostgresUserRepository
+from api.src.adapters.tools.aviationstack_flight_tool import AviationStackFlightTool
+from api.src.adapters.tools.tavily_hotel_tool import TavilyHotelTool
+from api.src.adapters.tools.tavily_web_search_tool import TavilyWebSearchTool
+from api.src.infrastructure.security import hash_password, verify_password
+from api.src.ports.cache.cache_store import CacheStore
+from api.src.ports.queue.job_queue import JobQueue
+from api.src.use_cases.authenticate_user_use_case import AuthenticateUserUseCase
+from api.src.use_cases.build_sheet_use_case import BuildSheetUseCase
+from api.src.use_cases.create_slides_use_case import CreateSlidesUseCase
+from api.src.use_cases.plan_trip_use_case import PlanTripUseCase
+from api.src.use_cases.polish_resume_use_case import PolishResumeUseCase
+from api.src.use_cases.register_user_use_case import RegisterUserUseCase
+from api.src.use_cases.research_industry_use_case import ResearchIndustryUseCase
 
 
 # ── Singletons (process-scoped) ──────────────────────────────────────────────

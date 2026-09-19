@@ -1,7 +1,7 @@
-from domain.entities.travel_request import TravelRequest
-from domain.entities.travel_plan import TravelPlan
-from ports.planners.travel_planner import TravelPlanner
-from use_cases.exceptions import EmptyQueryError, PlanningFailedError
+from api.src.domain.entities.travel_request import TravelRequest
+from api.src.domain.entities.travel_plan import TravelPlan
+from api.src.ports.planners.travel_planner import TravelPlanner
+from api.src.use_cases.exceptions import EmptyQueryError, PlanningFailedError
 
 
 class PlanTripUseCase:

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-from use_cases.exceptions import (
+from api.src.use_cases.exceptions import (
     EmptyQueryError,
     PlanningFailedError,
     UserAlreadyExistsError,

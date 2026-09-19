@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from domain.value_objects.thread_id import ThreadId
+from api.src.domain.value_objects.thread_id import ThreadId
 
 @dataclass
 class ResumeResult:

@@ -1,6 +1,6 @@
 import redis.asyncio as aioredis
-from ports.cache.cache_store import CacheStore
-from adapters.exceptions import CacheError
+from api.src.ports.cache.cache_store import CacheStore
+from api.src.adapters.exceptions import CacheError
 
 
 class RedisCacheStore(CacheStore):

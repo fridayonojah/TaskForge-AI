@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from domain.entities.travel_request import TravelRequest
-from domain.entities.travel_plan import TravelPlan
+from api.src.domain.entities.travel_request import TravelRequest
+from api.src.domain.entities.travel_plan import TravelPlan
 
 
 class TravelPlanner(ABC):

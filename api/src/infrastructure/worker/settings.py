@@ -1,5 +1,5 @@
 import os
-from infrastructure.worker.tasks import plan_trip_task, research_industry_task
+from api.src.infrastructure.worker.tasks import plan_trip_task, research_industry_task
 
 
 class WorkerSettings:

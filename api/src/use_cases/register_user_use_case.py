@@ -1,7 +1,7 @@
-from domain.entities.user import User
-from domain.value_objects.user_id import UserId
-from ports.repositories.user_repository import UserRepository
-from use_cases.exceptions import UserAlreadyExistsError
+from api.src.domain.entities.user import User
+from api.src.domain.value_objects.user_id import UserId
+from api.src.ports.repositories.user_repository import UserRepository
+from api.src.use_cases.exceptions import UserAlreadyExistsError
 
 class RegisterUserUseCase:
     def __init__(self, repo: UserRepository, hash_password_fn) -> None:

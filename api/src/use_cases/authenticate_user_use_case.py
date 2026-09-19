@@ -1,6 +1,6 @@
-from domain.entities.user import User
-from ports.repositories.user_repository import UserRepository
-from use_cases.exceptions import InvalidCredentialsError
+from api.src.domain.entities.user import User
+from api.src.ports.repositories.user_repository import UserRepository
+from api.src.use_cases.exceptions import InvalidCredentialsError
 
 class AuthenticateUserUseCase:
     def __init__(self, repo: UserRepository, verify_password_fn) -> None:

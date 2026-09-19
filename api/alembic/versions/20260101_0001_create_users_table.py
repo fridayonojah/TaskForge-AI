@@ -8,7 +8,7 @@ Create Date: 2026-01-01 00:00:00.000000
 from __future__ import annotations
 from typing import Sequence, Union
 
-from alembic import op
+from api.alembic import op
 import sqlalchemy as sa
 
 revision: str = "0001"

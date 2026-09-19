@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from domain.entities.job import Job
+from api.src.domain.entities.job import Job
 
 class JobQueue(ABC):
     @abstractmethod

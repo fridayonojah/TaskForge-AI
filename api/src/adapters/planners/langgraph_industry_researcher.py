@@ -5,10 +5,10 @@ from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, START, END
 
-from domain.entities.research_request import ResearchRequest
-from domain.entities.research_result import ResearchResult
-from ports.planners.industry_researcher import IndustryResearcher
-from adapters.tools.tavily_web_search_tool import TavilyWebSearchTool
+from api.src.domain.entities.research_request import ResearchRequest
+from api.src.domain.entities.research_result import ResearchResult
+from api.src.ports.planners.industry_researcher import IndustryResearcher
+from api.src.adapters.tools.tavily_web_search_tool import TavilyWebSearchTool
 
 
 class _ResearchState(TypedDict):

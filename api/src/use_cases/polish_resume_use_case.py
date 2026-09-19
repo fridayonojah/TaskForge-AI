@@ -1,7 +1,7 @@
-from domain.entities.resume_request import ResumeRequest
-from domain.entities.resume_result import ResumeResult
-from ports.planners.resume_polisher import ResumePolisher
-from use_cases.exceptions import EmptyQueryError, PlanningFailedError
+from api.src.domain.entities.resume_request import ResumeRequest
+from api.src.domain.entities.resume_result import ResumeResult
+from api.src.ports.planners.resume_polisher import ResumePolisher
+from api.src.use_cases.exceptions import EmptyQueryError, PlanningFailedError
 
 class PolishResumeUseCase:
     def __init__(self, polisher: ResumePolisher) -> None:

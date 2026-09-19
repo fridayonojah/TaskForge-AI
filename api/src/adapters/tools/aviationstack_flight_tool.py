@@ -5,7 +5,7 @@ import airportsdata
 import pycountry
 from tenacity import retry, stop_after_attempt, wait_exponential, RetryError
 
-from ports.tools.flight_search_tool import FlightSearchTool
+from api.src.ports.tools.flight_search_tool import FlightSearchTool
 
 _STOPWORDS = {"flight", "flights", "hotel", "hotels", "trip", "travel", "from", "to", "book", "find", "search"}
 

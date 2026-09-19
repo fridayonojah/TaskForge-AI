@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from datetime import datetime
-from domain.value_objects.user_id import UserId
+from api.src.domain.value_objects.user_id import UserId
 
 @dataclass
 class User:

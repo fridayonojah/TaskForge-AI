@@ -1,7 +1,7 @@
-from domain.entities.research_request import ResearchRequest
-from domain.entities.research_result import ResearchResult
-from ports.planners.industry_researcher import IndustryResearcher
-from use_cases.exceptions import EmptyQueryError, PlanningFailedError
+from api.src.domain.entities.research_request import ResearchRequest
+from api.src.domain.entities.research_result import ResearchResult
+from api.src.ports.planners.industry_researcher import IndustryResearcher
+from api.src.use_cases.exceptions import EmptyQueryError, PlanningFailedError
 
 class ResearchIndustryUseCase:
     def __init__(self, researcher: IndustryResearcher) -> None:

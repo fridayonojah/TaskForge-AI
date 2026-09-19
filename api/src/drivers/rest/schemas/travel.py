@@ -1,6 +1,7 @@
 from pydantic import BaseModel
-from domain.entities.travel_request import TravelRequest
-from domain.value_objects.thread_id import ThreadId
+
+from api.src.domain.entities.travel_request import TravelRequest
+from api.src.domain.value_objects.thread_id import ThreadId
 
 
 class TravelRequestSchema(BaseModel):
@@ -22,3 +23,13 @@ class TravelPlanSchema(BaseModel):
     hotel_results: str
     itinerary: str
     llm_calls: int
+
+
+class TravelJobResponse(BaseModel):
+    job_id: str
+    status: str
+    message: str
+
+
+class HealthResponse(BaseModel):
+    status: str

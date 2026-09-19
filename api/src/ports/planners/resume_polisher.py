@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from domain.entities.resume_request import ResumeRequest
-from domain.entities.resume_result import ResumeResult
+from api.src.domain.entities.resume_request import ResumeRequest
+from api.src.domain.entities.resume_result import ResumeResult
 
 class ResumePolisher(ABC):
     @abstractmethod

@@ -4,11 +4,11 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import IntegrityError
 
-from domain.entities.user import User
-from domain.value_objects.user_id import UserId
-from infrastructure.models import UserModel
-from ports.repositories.user_repository import UserRepository
-from adapters.exceptions import DatabaseError
+from api.src.domain.entities.user import User
+from api.src.domain.value_objects.user_id import UserId
+from api.src.infrastructure.models import UserModel
+from api.src.ports.repositories.user_repository import UserRepository
+from api.src.adapters.exceptions import DatabaseError
 
 
 class PostgresUserRepository(UserRepository):
