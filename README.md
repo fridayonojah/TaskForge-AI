@@ -89,19 +89,7 @@ TaskForge AI uses **Hexagonal Architecture** — the domain has zero framework i
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-### Multi-Agent Graphs (LangGraph)
 
-Each feature is a `StateGraph`. Node functions are synchronous Python; the adapter wraps each `graph.invoke()` call in `asyncio.to_thread()` so FastAPI's event loop is never blocked.
-
-```
-Travel Plan:     START → flight_agent → hotel_agent → itinerary_agent → final_agent → END
-Slides:          START → outline_agent → content_agent → END
-Resume:          START → analyze_agent → polish_agent → END
-Sheet:           START → schema_agent → generate_agent → END
-Industry Report: START → search_agent → analyze_agent → report_agent → END
-```
-
----
 
 ## Project Structure
 

@@ -4,8 +4,8 @@ import uuid
 from datetime import datetime
 
 import redis.asyncio as aioredis
-from domain.entities.job import Job, JobStatus
-from ports.queue.job_queue import JobQueue
+from api.src.domain.entities.job import Job, JobStatus
+from api.src.ports.queue.job_queue import JobQueue
 
 
 class ArqJobQueue(JobQueue):

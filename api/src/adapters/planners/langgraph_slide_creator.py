@@ -7,9 +7,9 @@ from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, START, END
 
-from domain.entities.slide_request import SlideRequest
-from domain.entities.slide_deck import SlideDeck
-from ports.planners.slide_creator import SlideCreator
+from api.src.domain.entities.slide_request import SlideRequest
+from api.src.domain.entities.slide_deck import SlideDeck
+from api.src.ports.planners.slide_creator import SlideCreator
 
 
 class _SlideState(TypedDict):
